@@ -1,0 +1,49 @@
+<div class="row">
+
+    <div class="col">
+        <h1>*gnIF</h1>
+        <hr>
+
+        <div *ngIf="mostrar" class="card text-white bg-primary mb-3" style="width: 100%;">
+            <div class="card-body">
+              <h5 class="card-title">{{ frase.autor }}</h5>
+              <p class="card-text">{{ frase.mensaje }}.</p>
+            </div>
+        </div>
+
+        <button (click)=" mostrar = !mostrar " class="btn btn-outline-primary btn-block">Mostrar/Ocultar</button>
+
+    </div>
+
+    <div class="row">
+
+        <div class="col">
+            <h1>Prueba</h1>
+            <hr>
+    
+            <div *ngIf="ocultar" class="card text-white bg-primary mb-3" style="width: 100%;">
+                <div class="card-body">
+                  <h5 class="card-title">{{ titulo.pelicula }}</h5>
+                  <p class="card-text">{{ titulo.nombrePelicula }}.</p>
+                </div>
+            </div>
+
+            <button (click)="ocultar = !ocultar" class="btn btn-outline-success btn-block">Ocultar</button>
+
+        </div>    
+    
+
+    
+    <div class="col">
+        <h1>*gnFor</h1>
+        <hr>
+
+        <ul class="list-group">
+            <li *ngFor="let personaje of personajes; let i = index" class="list-group-item">
+               {{ i + 1 }} - {{ personaje }}
+            </li>
+        </ul>
+
+    </div>
+
+</div>
